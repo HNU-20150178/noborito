@@ -1,5 +1,5 @@
-// Mixin.js
-let Mixin = {
+// mixin.js
+let mixin = {
   props: {
       weight:{
           default: 10
@@ -14,4 +14,4 @@ let Mixin = {
       }
   }
 };
-export default Mixin;
+export default mixin;
