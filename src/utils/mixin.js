@@ -9,8 +9,18 @@ let mixin = {
       console.log('mixin')
   },
   methods:{
-      onClick(){
+      onClick() {
           this.data++;
+      },
+      back() {
+        let page = this.pageInfo.page;
+        this.pageTransfer(page);
+      },
+      /**
+       * @param {String} page     // ページ
+       */
+      pageTransfer(page){
+        console.log(page);
       }
   }
 };
