@@ -1,11 +1,12 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import router from "./router/index"
-import BootstrapVue3 from 'bootstrap-vue-3'
-import mixin from './utils/mixin.js'
+import router from './router'
+import vuetify from './plugins/vuetify'
+import { loadFonts } from './plugins/webfontloader'
 
-import "bootstrap/dist/css/bootstrap.min.css"
-import "bootstrap"
+loadFonts()
 
-
-createApp(App).use(BootstrapVue3).mixin(mixin).use(router).mount('#app')
+createApp(App)
+  .use(router)
+  .use(vuetify)
+  .mount('#app')
